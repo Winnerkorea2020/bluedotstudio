@@ -332,6 +332,43 @@ body.dark-theme {
   margin-bottom: var(--mb-0-5);
 }
 
+/*=============== Place ===============*/
+
+.place__card {
+  position: relative;
+  width: 100px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.place__data {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2rem;
+}
+
+.place__title,
+.place__description {
+  color: var(--container-color);
+}
+
+.place__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.place__description {
+  display: block;
+  font-size: var(--small-font-size);
+}
+
+.place__img {
+  transition: 0.3s;
+}
+
+.place__img:hover {
+  transform: scale(1.1);
+}
+
 /*=============== APP ===============*/
 .app__container {
   gap: 2.5rem;
