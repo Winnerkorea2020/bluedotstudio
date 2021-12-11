@@ -202,14 +202,58 @@ body.dark-theme {
 
 .nav__link,
 .nav__logo,
-.nav__toggle {
+.nav__toggle,
+.nav__name {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+}
+
+.nav__name {
+  white-space: normal;
+  cursor: pointer;
 }
 
 .nav__toggle {
   font-size: 1.3rem;
   cursor: pointer;
+}
+
+/* Dropdown */
+.dropmenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropmenu .text {
+  text-align: center;
+}
+
+.nav__dropdown {
+  display: none;
+  transition: 0.4s ease-in-out;
+  background-color: var(--body-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  padding: 0 2.5rem;
+}
+
+.nav__item:hover .nav__dropdown {
+  display: block;
+}
+
+.nav__dropdown-collapse {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.nav__dropdown-item {
+  padding: 0.5rem 0;
+}
+
+.nav__dropdown-link {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  text-align: center;
 }
 
 /* Show menu */
@@ -326,6 +370,16 @@ body.dark-theme {
   text-align: center;
 }
 
+.services__data-2 {
+  display: grid;
+  row-gap: 1rem;
+  background-color: var(--container-color);
+  box-shadow: 0px 2px 6px hsla(var(--hue), 100%, 15%, 0.15);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
 .services__img {
   width: 135px;
   justify-self: center;
@@ -367,6 +421,30 @@ body.dark-theme {
 
 .place__img:hover {
   transform: scale(1.1);
+}
+
+.place__btn {
+  cursor: pointer;
+  padding: 0.25rem 1rem;
+  border-radius: 10px;
+  background-color: var(--first-color);
+  color: #fff;
+}
+/*=============== Room ===============*/
+
+.room__title {
+  margin-bottom: 0.25rem;
+}
+
+.room__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.room__img {
+  min-height: 100%;
+  width: auto;
 }
 
 /*=============== APP ===============*/
@@ -586,6 +664,23 @@ body.dark-theme {
   .nav__toggle {
     display: none;
   }
+
+  /* DROP DOWN MENU */
+  .dropmenu {
+    position: relative;
+  }
+
+  .nav__dropdown {
+    position: absolute;
+
+    top: 2rem;
+    left: 15px;
+    min-width: max-content;
+    padding: 0 1.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
   .change-theme {
     position: initial;
   }
@@ -614,6 +709,7 @@ body.dark-theme {
   .services__container {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .contact__container {
     grid-template-columns: 3fr 1.5fr 1.25fr;
   }
