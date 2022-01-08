@@ -455,7 +455,7 @@ body.dark-theme {
 
 .room__price--items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
 }
 
@@ -727,6 +727,9 @@ body.dark-theme {
   .app__buttons {
     justify-content: initial;
   }
+  .room__price--items {
+    grid-template-columns: repeat(2, 2fr);
+  }
 }
 
 /* For large devices */
@@ -777,5 +780,8 @@ body.dark-theme {
   }
   .scrollup {
     right: 2rem;
+  }
+  .room__price--items {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
