@@ -4,11 +4,11 @@
 :root {
   --header-height: 3rem;
   /*========== Colors ==========*/
-  --hue: 243;
-  --sat: 100%;
-  --first-color: hsl(243, 100%, 69%);
+  --hue: 224;
+  --sat: 76%;
+  --first-color: hsl(221, 83%, 53%);
   --first-color-light: hsl(var(--hue), var(--sat), 85%);
-  --first-color-lighten: hsl(var(--hue), var(--sat), 80%);
+  --first-color-lighten: hsl(var(--hue), var(--sat), 48%);
   --first-color-alt: hsl(var(--hue), var(--sat), 53%);
   --title-color: hsl(243, 4%, 15%);
   --text-color: hsl(var(--hue), 4%, 35%);
@@ -400,13 +400,13 @@ body.dark-theme {
   left: 2rem;
 }
 
-.place__title,
 .place__description {
   color: var(--container-color);
 }
 
 .place__title {
   font-size: var(--h3-font-size);
+  color: #fff;
   margin-bottom: 0.25rem;
 }
 
@@ -447,6 +447,38 @@ body.dark-theme {
   width: auto;
 }
 
+/*=============== Room Info. ===============*/
+
+.room__info--price h1 {
+  padding: 1rem 0;
+}
+
+.room__price--items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.room__items {
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.room__info--rule {
+  padding: 2rem 0;
+}
+
+.room__info--rule ul {
+  padding-left: 2rem;
+}
+
+.room__info--rule ul li {
+  list-style-type: disc;
+  padding: 0.5rem 0;
+}
+
 /*=============== APP ===============*/
 .app__container {
   gap: 2.5rem;
@@ -472,6 +504,10 @@ body.dark-theme {
   padding-bottom: 3rem;
 }
 
+.contact__container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
 .contact__description {
   text-align: center;
 }
@@ -712,10 +748,10 @@ body.dark-theme {
   }
 
   .contact__container {
-    grid-template-columns: 3fr 1.5fr 1.25fr;
+    grid-template-columns: 3fr, 2fr 1fr;
   }
   .footer__container {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .footer__social {
     align-items: flex-start;
